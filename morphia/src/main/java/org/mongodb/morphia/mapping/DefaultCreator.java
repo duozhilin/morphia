@@ -15,7 +15,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -25,7 +24,7 @@ public class DefaultCreator implements ObjectFactory {
 
     private static final Logger LOG = MorphiaLoggerFactory.get(DefaultCreator.class);
 
-    private Map<String, Class> classNameCache = new ConcurrentHashMap<String, Class>();
+    private Map<String, Class> classNameCache = new HashMap<String, Class>();
 
     private MapperOptions options = null;
 
